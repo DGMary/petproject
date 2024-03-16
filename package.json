@@ -12,7 +12,10 @@
     "format": "prettier . --write"
   },
   "lint-staged": {
-    "**.*": "prettier . --write"
+    "**.{js,css,ts,tsx,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
